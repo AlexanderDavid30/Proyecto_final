@@ -1,0 +1,14 @@
+{% extends 'home.html' %} {% block body %}
+
+se puede utilizar en todas las que se van a eliminar
+<div class="card w-50 mx-auto my-3">
+  <div class="card-body">
+    <form method="post">
+      <h1>Estas seguro que quieres eliminar esto</h1>
+      {% csrf_token %}
+      <button type="submit" class="btn btn-success" >SI</button>
+      <a href="{% url 'prestar:list' %}" class="btn btn-danger" >No</a>
+    </form>
+  </div>
+</div>
+{% endblock %}
